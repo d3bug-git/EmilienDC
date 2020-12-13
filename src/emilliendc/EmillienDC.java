@@ -19,7 +19,6 @@ public class EmillienDC {
      */
     public static void main(String[] args) {
         LoginPanel loginPanel = new LoginPanel();
-        ProjectManagerPanel projectManagerPanel = new ProjectManagerPanel();
         RootFrame rootFrame = new RootFrame();
         rootFrame.setRootPanel(loginPanel);
     }
