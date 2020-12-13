@@ -13,6 +13,7 @@ public abstract class User extends Entity {
     
     protected String nom;
     protected String prenom;
+    protected String type;
 
     public User(int id,String nom, String prenom) {
         this.id = id;
@@ -40,5 +41,14 @@ public abstract class User extends Entity {
     public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+    
    
 }
