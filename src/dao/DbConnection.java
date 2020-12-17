@@ -8,6 +8,9 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 
 
@@ -16,29 +19,30 @@ import java.sql.SQLException;
  * @author Emillien
  */
 public class DbConnection {
-    //URL de connexion
-  private String url = "jdbc:postgresql://localhost:5432/emilienDC";
-  //Nom du user
-  private String user = "postgres";
-  //Mot de passe de l'utilisateur
-  private String passwd = "postgres";
+  //URL de connexion
+  private String url = "jdbc:sqlite:AppEmilienDC.db";
+
   //Objet Connection
-  private static Connection connect;
+  private static Connection connection;
 
   //Constructeur privé
   private DbConnection(){
-    try {
-      connect = DriverManager.getConnection(url, user, passwd);
-    } catch (SQLException e) {
-      e.printStackTrace();
-    }
+      
+       
+      try {
+          Class.forName("org.sqlite.JDBC");
+          connection = DriverManager.getConnection(url);
+      } catch (ClassNotFoundException | SQLException ex) {
+          Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, null, ex);
+      }
+
   }
 
   //Méthode qui va nous retourner notre instance et la créer si elle n'existe pas
    public static Connection getInstance(){
-    if(connect == null){
-      new DbConnection();
+    if(connection == null){
+       new DbConnection();
     }
-    return connect;   
+    return connection;   
   } 
 }

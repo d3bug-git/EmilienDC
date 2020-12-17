@@ -7,6 +7,8 @@ package controller;
 
 import View.AppFrame;
 import View.PanelFactory;
+import dao.DbConnection;
+import java.sql.Connection;
 
 
 /**
@@ -16,17 +18,23 @@ import View.PanelFactory;
 public class AppController {
     
     private AppFrame appFrame;
-
+    private Connection bdd;
+    
     public AppController() {
-     
+     bdd = DbConnection.getInstance();
     }
     public AppFrame getAppFrame(){
         return this.appFrame; 
     }
     public void start(){
+       
         appFrame = new AppFrame(this);
     }
-
+    
+    private void setupApp(){
+        
+    }
+    
     public void login(String pseudo, String password) {
         System.out.println("Pseudo: "+pseudo+" Password :"+password);
         appFrame.setAppPanel(PanelFactory.makeManagerPanel());
