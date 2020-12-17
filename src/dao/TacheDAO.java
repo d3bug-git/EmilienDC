@@ -41,7 +41,7 @@ public class TacheDAO extends DAO<Tache>{
        try {
       ResultSet result = this.connect.createStatement(
         ResultSet.TYPE_SCROLL_INSENSITIVE,
-        ResultSet.CONCUR_READ_ONLY).executeQuery("SELECT * FROM eleve WHERE elv_id = " + id);
+        ResultSet.CONCUR_READ_ONLY).executeQuery("SELECT * FROM taches WHERE tache_id = " + id);
       if(result.first())
         tache = new Tache(
           id,

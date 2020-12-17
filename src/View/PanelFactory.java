@@ -13,7 +13,9 @@ import controller.AppController;
  */
 public class PanelFactory {
     
-    public static LoginPanel makeLoginPanel(AppController appController){
+    protected static final AppController appController = AppController.getInstance(); 
+    
+    public static LoginPanel makeLoginPanel(){
         return new LoginPanel(appController);
     }
     

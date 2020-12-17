@@ -19,7 +19,7 @@ public class AppFrame extends JFrame {
      private AppController appController;
     
     public AppFrame(AppController appController) {
-        appPanel = PanelFactory.makeLoginPanel(appController);
+        appPanel = PanelFactory.makeLoginPanel();
         this.setupFrame();
         this.appController = appController;
     }

@@ -19,20 +19,24 @@ public class AppController {
     
     private AppFrame appFrame;
     private Connection bdd;
+    private static AppController single;
     
-    public AppController() {
+    private AppController() {
      bdd = DbConnection.getInstance();
     }
+    
+    public static AppController getInstance(){
+        if(single == null)
+            single = new AppController();
+        return single;
+    }
+    
     public AppFrame getAppFrame(){
         return this.appFrame; 
     }
-    public void start(){
+    public void run(){
        
         appFrame = new AppFrame(this);
-    }
-    
-    private void setupApp(){
-        
     }
     
     public void login(String pseudo, String password) {

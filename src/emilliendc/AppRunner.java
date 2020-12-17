@@ -19,8 +19,7 @@ public class AppRunner {
      */
     public static void main(String[] args) {
         System.out.println("Load Emillien DC");
-        AppController appController = new AppController();
-        appController.start();
+        AppController.getInstance().run();
         System.out.println("Start Emillien DC");
     }
     
