@@ -5,22 +5,23 @@
  */
 package emilliendc;
 
-import View.*;
+import controller.AppController;
 
 
 /**
  *
  * @author hognoul
  */
-public class EmillienDC {
+public class AppRunner {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        LoginPanel loginPanel = new LoginPanel();
-        RootFrame rootFrame = new RootFrame();
-        rootFrame.setRootPanel(loginPanel);
+        System.out.println("Load Emillien DC");
+        AppController appController = new AppController();
+        appController.start();
+        System.out.println("Start Emillien DC");
     }
     
 }

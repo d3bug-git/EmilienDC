@@ -13,6 +13,7 @@ import javax.swing.JPanel;
  * @author hognoul
  */
 public class ProjectManagerPanel extends JPanel{
+    
     public ProjectManagerPanel(){
         this.setBackground(Color.BLUE);
     }
