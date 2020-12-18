@@ -5,14 +5,16 @@
  */
 package Entity;
 
+import java.util.UUID;
+
 /**
  *
  * @author hognoul
  */
 public class ProjectManager extends User{
     
-    public ProjectManager(int id, String nom, String prenom) {
-        super(id, nom, prenom);
+    public ProjectManager(UUID id,String pseudo,String password, String nom, String prenom) {
+        super(id,pseudo,password, nom, prenom);
     }
     
 }

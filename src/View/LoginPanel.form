@@ -70,9 +70,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JPasswordField" name="passwordTextField">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jPasl**"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="loginButton">
       <Properties>

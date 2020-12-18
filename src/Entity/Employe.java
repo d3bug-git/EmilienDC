@@ -7,6 +7,7 @@ package Entity;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 /**
  *
@@ -14,11 +15,19 @@ import java.util.Set;
  */
 public class Employe extends User {
     
-    public Employe(int id, String nom, String prenom) {
-        super(id, nom, prenom);
+    private final Set<Tache> listTache;
+    
+    public Employe(UUID id,String pseudo,String password, String nom, String prenom) {
+        super(id,pseudo,password, nom, prenom);
+        listTache = new HashSet<>();
     }
     
-    private Set<Tache> listTache = new HashSet<Tache>();
+    public Employe(String pseudo,String nom, String prenom) {
+        super(pseudo,nom, prenom);
+        listTache = new HashSet<>();
+    }
+    
+    
     
     public void addTache(Tache tache){
         if(!this.listTache.contains(tache))

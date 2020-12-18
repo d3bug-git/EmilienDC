@@ -9,6 +9,7 @@ import Entity.Tache;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.UUID;
 
 /**
  *
@@ -35,13 +36,12 @@ public class TacheDAO extends DAO<Tache>{
     return false;
     }
 
-    @Override
-    public Tache find(int id) {
+    public Tache find(UUID id) {
         Tache tache = new Tache();
        try {
       ResultSet result = this.connect.createStatement(
         ResultSet.TYPE_SCROLL_INSENSITIVE,
-        ResultSet.CONCUR_READ_ONLY).executeQuery("SELECT * FROM taches WHERE tache_id = " + id);
+        ResultSet.CONCUR_READ_ONLY).executeQuery("SELECT * FROM taches WHERE tache_id = " + id.toString());
       if(result.first())
         tache = new Tache(
           id,

@@ -5,23 +5,34 @@
  */
 package Entity;
 
+import java.util.UUID;
+
 /**
  *
  * @author Emillien
  */
-public abstract class User extends Entity {
+public class User extends Entity {
     
+    protected String pseudo;
     protected String nom;
     protected String prenom;
+    protected String password;
     protected String type;
 
-    public User(int id,String nom, String prenom) {
+    public User(UUID id,String pseudo,String password,String nom, String prenom) {
         this.id = id;
+        this.pseudo = pseudo;
+        this.password = password;
         this.nom = nom;
         this.prenom = prenom;
     }
-
-    public User(String nom, String prenom) {
+    
+    public User() {
+        
+    }
+    
+    public User(String pseudo, String nom, String prenom) {
+        this.pseudo = pseudo;
         this.nom = nom;
         this.prenom = prenom;
     }
@@ -32,6 +43,7 @@ public abstract class User extends Entity {
 
     public void setNom(String nom) {
         this.nom = nom;
+ 
     }
 
     public String getPrenom() {
@@ -49,6 +61,28 @@ public abstract class User extends Entity {
     public void setType(String type) {
         this.type = type;
     }
+
+    public String getPseudo() {
+        return pseudo;
+    }
+
+    public void setPseudo(String pseudo) {
+        this.pseudo = pseudo;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "pseudo=" + pseudo + ", nom=" + nom + ", prenom=" + prenom + ", password=" + password + ", type=" + type + '}';
+    }
+    
     
    
 }

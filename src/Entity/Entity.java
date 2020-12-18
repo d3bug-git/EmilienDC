@@ -5,18 +5,20 @@
  */
 package Entity;
 
+import java.util.UUID;
+
 /**
  *
  * @author Emillien
  */
 public abstract class Entity {
-    protected int id;
+    protected UUID id;
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
     

@@ -5,6 +5,8 @@
  */
 package Entity;
 
+import java.util.UUID;
+
 /**
  *
  * @author Emilien
@@ -12,13 +14,13 @@ package Entity;
 public class Tache extends Entity{
     private String   nom;
     
-     public Tache(int id,String nom) {
+     public Tache(UUID id,String nom) {
          this.id = id;
          this.nom = nom;
      }
 
     public Tache() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
      
      public String getNom() {

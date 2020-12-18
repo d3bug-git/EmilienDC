@@ -20,6 +20,12 @@ public class PanelFactory {
     }
     
     public static ManagerPanel makeManagerPanel(){
-        return new ManagerPanel();
+        return new ManagerPanel(appController);
+    }
+    public static BossPanel makeBossPanel(){
+        return new BossPanel(appController);
+    }
+    public static EmployePanel makeEmployePanel(){
+        return new EmployePanel(appController);
     }
 }

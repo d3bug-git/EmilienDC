@@ -6,6 +6,7 @@
 package dao;
 
 import java.sql.Connection;
+import java.util.UUID;
 
 public abstract class DAO<T> {
   protected Connection connect = null;
@@ -40,5 +41,5 @@ public abstract class DAO<T> {
   * @param id
   * @return T
   */
-  public abstract T find(int id);
+  public abstract T find(UUID id);
 }

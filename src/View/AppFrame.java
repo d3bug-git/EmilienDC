@@ -15,19 +15,20 @@ import javax.swing.JPanel;
  */
 public class AppFrame extends JFrame {
 
-     private JPanel appPanel;
-     private AppController appController;
-    
+    private JPanel appPanel;
+    private AppController appController;
+
     public AppFrame(AppController appController) {
+        this.appController = appController;
         appPanel = PanelFactory.makeLoginPanel();
         this.setupFrame();
-        this.appController = appController;
     }
 
     public JPanel getAppPanel() {
         return appPanel;
     }
-    private void setupFrame(){
+
+    private void setupFrame() {
         this.setTitle("Emilien DC");
         this.setSize(400, 500);
         this.setLocationRelativeTo(null);
@@ -35,11 +36,11 @@ public class AppFrame extends JFrame {
         this.setContentPane(appPanel);
         this.setVisible(true);
     }
+
     public void setAppPanel(JPanel appPanel) {
         this.appPanel = appPanel;
         this.setContentPane(this.appPanel);
         this.pack();
     }
-    
-    
+
 }

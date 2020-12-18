@@ -12,13 +12,21 @@ import java.sql.Connection;
  * @author hognoul
  */
 public class DAOFactory {
-    protected static final Connection conn = DbConnection.getInstance();   
+    protected static final Connection conn = Bdd.getInstance();   
 
   /**
   * Retourne un objet Classe interagissant avec la BDD
   * @return DAO
   */
-  public static DAO getTacheDAO(){
+  public static TacheDAO getTacheDAO(){
     return new TacheDAO(conn);
+  }
+  
+  /**
+  * Retourne un objet Classe interagissant avec la BDD
+  * @return DAO
+  */
+  public static UserDAO getUserDAO(){
+    return new UserDAO(conn);
   }
 }

@@ -6,6 +6,7 @@
 package emilliendc;
 
 import controller.AppController;
+import java.util.UUID;
 
 
 /**
@@ -18,9 +19,14 @@ public class AppRunner {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Load Emillien DC");
         AppController.getInstance().run();
-        System.out.println("Start Emillien DC");
+        //generateUUID();
+    }
+    
+    private static void generateUUID(){
+        for(int i=0;i<3;i++){
+            System.out.println("UUID-"+i+": "+UUID.randomUUID().toString());
+        }
     }
     
 }

@@ -35,7 +35,7 @@ public class LoginPanel extends javax.swing.JPanel {
     
     private void setupListeners(){
         loginButton.addActionListener((ActionEvent e) -> {
-            this.appController.login(pseudoTextField.getText(), passwordTextField.getText());
+            this.appController.login(pseudoTextField.getText(), String.valueOf(passwordTextField.getPassword()));
         });
     }
     
@@ -51,8 +51,6 @@ public class LoginPanel extends javax.swing.JPanel {
         labelPseudo.setText("Pseudo :");
 
         labelPassword.setText("Mot de Passe :");
-
-        passwordTextField.setText("jPasl**");
 
         loginButton.setText("login");
 

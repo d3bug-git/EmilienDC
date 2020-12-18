@@ -5,16 +5,20 @@
  */
 package View;
 
+import controller.AppController;
+
 /**
  *
  * @author hognoul
  */
 public class BossPanel extends javax.swing.JPanel {
 
+    private AppController appController;
     /**
      * Creates new form BossPanel
      */
-    public BossPanel() {
+    public BossPanel(AppController appController) {
+        this.appController = appController;
         initComponents();
     }
 

@@ -11,14 +11,14 @@ import controller.AppController;
  *
  * @author hognoul
  */
-public class ManagerPanel extends javax.swing.JPanel {
+public class EmployePanel extends javax.swing.JPanel {
 
     private AppController appController;
     /**
-     * Creates new form ManagerPanel
+     * Creates new form EmployePanel
      */
-    public ManagerPanel(AppController appController) {
-        appController = appController;
+    public EmployePanel(AppController appController) {
+        this.appController = appController;
         initComponents();
     }
 
@@ -31,30 +31,30 @@ public class ManagerPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titleLabel = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        titleLabel.setText("Chef De Projet");
+        jLabel1.setText("Employe Panel");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addGap(155, 155, 155)
+                .addComponent(jLabel1)
+                .addContainerGap(176, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(titleLabel)
-                .addContainerGap(261, Short.MAX_VALUE))
+                .addGap(39, 39, 39)
+                .addComponent(jLabel1)
+                .addContainerGap(247, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel titleLabel;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

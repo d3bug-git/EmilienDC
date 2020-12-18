@@ -5,43 +5,69 @@
  */
 package controller;
 
+import Entity.User;
+import Entity.UserType;
 import View.AppFrame;
 import View.PanelFactory;
-import dao.DbConnection;
-import java.sql.Connection;
-
+import dao.Bdd;
+import dao.DAOFactory;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author hognoul
  */
 public class AppController {
-    
+
     private AppFrame appFrame;
-    private Connection bdd;
     private static AppController single;
-    
+
     private AppController() {
-     bdd = DbConnection.getInstance();
+        Bdd.getInstance();
     }
-    
-    public static AppController getInstance(){
-        if(single == null)
+
+    public static AppController getInstance() {
+        if (single == null) {
             single = new AppController();
+        }
         return single;
     }
-    
-    public AppFrame getAppFrame(){
-        return this.appFrame; 
+
+    public AppFrame getAppFrame() {
+        return this.appFrame;
     }
-    public void run(){
-       
+
+    public void run() {
+
         appFrame = new AppFrame(this);
     }
-    
+
     public void login(String pseudo, String password) {
-        System.out.println("Pseudo: "+pseudo+" Password :"+password);
-        appFrame.setAppPanel(PanelFactory.makeManagerPanel());
+
+        User user = (User) DAOFactory.getUserDAO().findByPseudo(pseudo);
+        
+        if (null == user) {
+            JOptionPane.showMessageDialog(appFrame, "Utilisateur inexistant", "Alert", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        if (password.equals(user.getPassword())) {
+            switch (user.getType()) {
+                case UserType.CHEF_DE_PROJET:
+                    appFrame.setAppPanel(PanelFactory.makeManagerPanel());
+                    break;
+                case UserType.EMPLOYE:
+                    appFrame.setAppPanel(PanelFactory.makeEmployePanel());
+                    break;
+                case UserType.PATRON:
+                    appFrame.setAppPanel(PanelFactory.makeBossPanel());
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(appFrame, "Utilisateur n'est pas gérer dans cette version", "Alert", JOptionPane.WARNING_MESSAGE);
+            }       
+        }else{
+            JOptionPane.showMessageDialog(appFrame, "Mot de passe incorrect", "Alert", JOptionPane.WARNING_MESSAGE);
+        }
+        
     }
-    
 }
