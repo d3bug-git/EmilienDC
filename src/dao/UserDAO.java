@@ -5,7 +5,7 @@
  */
 package dao;
 
-import Entity.User;
+import Entity.Personne;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,30 +17,30 @@ import sql.query.SqlMetierStatement;
  *
  * @author hognoul
  */
-public class UserDAO extends DAO<User> {
+public class UserDAO extends DAO<Personne> {
 
     public UserDAO(Connection conn) {
         super(conn);
     }
 
     @Override
-    public boolean create(User obj) {
+    public boolean create(Personne obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean delete(User obj) {
+    public boolean delete(Personne obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean update(User obj) {
+    public boolean update(Personne obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public User find(UUID id) {
-        User user = new User();
+    public Personne find(UUID id) {
+        Personne user = new Personne();
 
         try {
             PreparedStatement preparedStatement = connect.prepareStatement(SqlMetierStatement.FIND_USER_BY_ID);
@@ -62,9 +62,9 @@ public class UserDAO extends DAO<User> {
         return null;
     }
 
-    public User findByPseudo(String pseudo) {
+    public Personne findByPseudo(String pseudo) {
 
-        User user = new User();
+        Personne user = new Personne();
         
         try {
             PreparedStatement preparedStatement = connect.prepareStatement(SqlMetierStatement.FIND_USER_BY_PSEUDO);

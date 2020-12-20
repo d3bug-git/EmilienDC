@@ -13,12 +13,12 @@ import javax.swing.JPanel;
  *
  * @author hognoul
  */
-public class AppFrame extends JFrame {
+public class Connexion extends JFrame {
 
     private JPanel appPanel;
     private AppController appController;
 
-    public AppFrame(AppController appController) {
+    public Connexion(AppController appController) {
         this.appController = appController;
         appPanel = PanelFactory.makeLoginPanel();
         this.setupFrame();

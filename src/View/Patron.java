@@ -11,13 +11,13 @@ import controller.AppController;
  *
  * @author hognoul
  */
-public class BossPanel extends javax.swing.JPanel {
+public class Patron extends javax.swing.JPanel {
 
     private AppController appController;
     /**
      * Creates new form BossPanel
      */
-    public BossPanel(AppController appController) {
+    public Patron(AppController appController) {
         this.appController = appController;
         initComponents();
     }

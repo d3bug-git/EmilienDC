@@ -18,14 +18,14 @@ import javax.swing.SpringLayout;
  *
  * @author hognoul
  */
-public class LoginPanel extends javax.swing.JPanel {
+public class Identificatin extends javax.swing.JPanel {
 
     private AppController appController;
 
     /**
      * Creates new form NewJPanel
      */
-    public LoginPanel(AppController appController) {
+    public Identificatin(AppController appController) {
         
         this.appController = appController;
         initComponents();

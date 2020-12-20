@@ -11,7 +11,7 @@ import java.util.UUID;
  *
  * @author Emillien
  */
-public class User extends Entity {
+public class Personne extends Entity {
     
     protected String pseudo;
     protected String nom;
@@ -19,7 +19,7 @@ public class User extends Entity {
     protected String password;
     protected String type;
 
-    public User(UUID id,String pseudo,String password,String nom, String prenom) {
+    public Personne(UUID id,String pseudo,String password,String nom, String prenom) {
         this.id = id;
         this.pseudo = pseudo;
         this.password = password;
@@ -27,11 +27,11 @@ public class User extends Entity {
         this.prenom = prenom;
     }
     
-    public User() {
+    public Personne() {
         
     }
     
-    public User(String pseudo, String nom, String prenom) {
+    public Personne(String pseudo, String nom, String prenom) {
         this.pseudo = pseudo;
         this.nom = nom;
         this.prenom = prenom;

@@ -5,16 +5,12 @@
  */
 package Entity;
 
-import java.util.UUID;
-
 /**
  *
  * @author hognoul
  */
-public class ProjectManager extends User{
-    
-    public ProjectManager(UUID id,String pseudo,String password, String nom, String prenom) {
-        super(id,pseudo,password, nom, prenom);
-    }
-    
+public class TypeUtilisateur {
+    public static final String PATRON = "PATRON";
+    public static final String EMPLOYE = "EMPLOYE";
+    public static final String CHEF_DE_PROJET = "CHEF_DE_PROJET";
 }

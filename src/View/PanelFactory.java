@@ -15,17 +15,17 @@ public class PanelFactory {
     
     protected static final AppController appController = AppController.getInstance(); 
     
-    public static LoginPanel makeLoginPanel(){
-        return new LoginPanel(appController);
+    public static Identificatin makeLoginPanel(){
+        return new Identificatin(appController);
     }
     
-    public static ManagerPanel makeManagerPanel(){
-        return new ManagerPanel(appController);
+    public static ChefEquipe makeManagerPanel(){
+        return new ChefEquipe(appController);
     }
-    public static BossPanel makeBossPanel(){
-        return new BossPanel(appController);
+    public static Patron makeBossPanel(){
+        return new Patron(appController);
     }
-    public static EmployePanel makeEmployePanel(){
-        return new EmployePanel(appController);
+    public static Employé makeEmployePanel(){
+        return new Employé(appController);
     }
 }

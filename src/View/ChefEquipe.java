@@ -11,13 +11,13 @@ import controller.AppController;
  *
  * @author hognoul
  */
-public class ManagerPanel extends javax.swing.JPanel {
+public class ChefEquipe extends javax.swing.JPanel {
 
     private AppController appController;
     /**
      * Creates new form ManagerPanel
      */
-    public ManagerPanel(AppController appController) {
+    public ChefEquipe(AppController appController) {
         appController = appController;
         initComponents();
     }

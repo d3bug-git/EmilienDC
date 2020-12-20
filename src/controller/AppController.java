@@ -5,9 +5,9 @@
  */
 package controller;
 
-import Entity.User;
-import Entity.UserType;
-import View.AppFrame;
+import Entity.Personne;
+import Entity.TypeUtilisateur;
+import View.Connexion;
 import View.PanelFactory;
 import dao.Bdd;
 import dao.DAOFactory;
@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
  */
 public class AppController {
 
-    private AppFrame appFrame;
+    private Connexion appFrame;
     private static AppController single;
 
     private AppController() {
@@ -33,18 +33,18 @@ public class AppController {
         return single;
     }
 
-    public AppFrame getAppFrame() {
+    public Connexion getAppFrame() {
         return this.appFrame;
     }
 
     public void run() {
 
-        appFrame = new AppFrame(this);
+        appFrame = new Connexion(this);
     }
 
     public void login(String pseudo, String password) {
 
-        User user = (User) DAOFactory.getUserDAO().findByPseudo(pseudo);
+        Personne user = (Personne) DAOFactory.getUserDAO().findByPseudo(pseudo);
         
         if (null == user) {
             JOptionPane.showMessageDialog(appFrame, "Utilisateur inexistant", "Alert", JOptionPane.WARNING_MESSAGE);
@@ -53,13 +53,13 @@ public class AppController {
 
         if (password.equals(user.getPassword())) {
             switch (user.getType()) {
-                case UserType.CHEF_DE_PROJET:
+                case TypeUtilisateur.CHEF_DE_PROJET:
                     appFrame.setAppPanel(PanelFactory.makeManagerPanel());
                     break;
-                case UserType.EMPLOYE:
+                case TypeUtilisateur.EMPLOYE:
                     appFrame.setAppPanel(PanelFactory.makeEmployePanel());
                     break;
-                case UserType.PATRON:
+                case TypeUtilisateur.PATRON:
                     appFrame.setAppPanel(PanelFactory.makeBossPanel());
                     break;
                 default:

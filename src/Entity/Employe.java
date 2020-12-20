@@ -13,7 +13,7 @@ import java.util.UUID;
  *
  * @author hognoul
  */
-public class Employe extends User {
+public class Employe extends Personne {
     
     private final Set<Tache> listTache;
     
