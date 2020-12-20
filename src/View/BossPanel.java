@@ -60,6 +60,11 @@ public class BossPanel extends javax.swing.JPanel {
         jLabel1.setText("Nom");
 
         ListeChef.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ListeChef.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListeChefActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Projet");
 
@@ -240,6 +245,10 @@ public class BossPanel extends javax.swing.JPanel {
     private void ListeEmployéActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListeEmployéActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ListeEmployéActionPerformed
+
+    private void ListeChefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListeChefActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ListeChefActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
