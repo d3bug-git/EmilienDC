@@ -7,7 +7,7 @@ package sql.query;
 
 /**
  *
- * @author hognoul
+ * @author Emilien
  */
 public class SqlCreateStatement {
 

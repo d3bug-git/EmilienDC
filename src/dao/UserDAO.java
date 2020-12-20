@@ -15,7 +15,7 @@ import sql.query.SqlMetierStatement;
 
 /**
  *
- * @author hognoul
+ * @author Emilien
  */
 public class UserDAO extends DAO<Personne> {
 

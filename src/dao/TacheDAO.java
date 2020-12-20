@@ -13,7 +13,7 @@ import java.util.UUID;
 
 /**
  *
- * @author hognoul
+ * @author Emilien
  */
 public class TacheDAO extends DAO<Tache>{
 

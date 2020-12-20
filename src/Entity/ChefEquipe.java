@@ -9,7 +9,7 @@ import java.util.UUID;
 
 /**
  *
- * @author hognoul
+ * @author Emilien
  */
 public class ChefEquipe extends Personne{
     

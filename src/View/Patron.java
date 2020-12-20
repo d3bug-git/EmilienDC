@@ -9,7 +9,7 @@ import controller.AppController;
 
 /**
  *
- * @author hognoul
+ * @author Emilien
  */
 public class Patron extends javax.swing.JPanel {
 

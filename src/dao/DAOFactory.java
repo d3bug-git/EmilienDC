@@ -9,7 +9,7 @@ import java.sql.Connection;
 
 /**
  *
- * @author hognoul
+ * @author Emilien
  */
 public class DAOFactory {
     protected static final Connection conn = Bdd.getInstance();   

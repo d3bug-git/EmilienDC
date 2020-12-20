@@ -7,7 +7,7 @@ package sql.query;
 
 /**
  *
- * @author hognoul
+ * @author Emiliens
  */
 public class SqlMetierStatement {
     

@@ -11,7 +11,7 @@ import java.util.UUID;
 
 /**
  *
- * @author hognoul
+ * @author Emilien
  */
 public class AppRunner {
 

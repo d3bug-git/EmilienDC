@@ -7,7 +7,7 @@ package Entity;
 
 /**
  *
- * @author hognoul
+ * @author Emilien
  */
 public class TypeUtilisateur {
     public static final String PATRON = "PATRON";

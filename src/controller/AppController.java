@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author hognoul
+ * @author Emilien
  */
 public class AppController {
 

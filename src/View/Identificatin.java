@@ -16,7 +16,7 @@ import javax.swing.SpringLayout;
 
 /**
  *
- * @author hognoul
+ * @author Emilien
  */
 public class Identificatin extends javax.swing.JPanel {
 

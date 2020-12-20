@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author hognoul
+ * @author Emilien
  */
 public class Connexion extends JFrame {
 
